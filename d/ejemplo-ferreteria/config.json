@@ -1,0 +1,23 @@
+{
+  "slug": "ejemplo-ferreteria",
+  "nombre": "Ferretería Ejemplo",
+  "lema": "Catálogo de ejemplo · precios al TC del día",
+  "whatsapp": "",
+  "direccion": "",
+  "horario": "",
+  "logo": "",
+  "colorPrincipal": "#c2410c",
+  "planillaCsvUrl": "",
+  "redondeo": 1,
+  "mostrarUSD": false,
+  "ocultarTC": false,
+  "tc": {
+    "modo": "oficial",
+    "endpoint": "https://diegodenac.github.io/catalogos/tc.json",
+    "recargoPct": 0,
+    "propio": 0,
+    "respaldo": 11.88
+  },
+  "demo": true,
+  "demoPara": "Ferretería Ejemplo"
+}

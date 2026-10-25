@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Catálogo con precios en Bs al día</title>
+<meta name="description" content="Catálogo para celular con precios en bolivianos que se actualizan solos con el tipo de cambio del día. Pedidos por WhatsApp. Cochabamba.">
+<meta property="og:title" content="Su catálogo en el celular, con precios en Bs que se actualizan solos">
+<meta property="og:description" content="Precios al tipo de cambio del día y pedidos por WhatsApp. Para comercios de Cochabamba.">
+<meta property="og:type" content="website">
+<style>
+  :root { --pri:#c2410c; --txt:#1f2937; --sub:#6b7280; --bg:#ffffff; --linea:#e5e7eb; --suave:#fff7ed; }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; color:var(--txt); background:var(--bg); line-height:1.5; }
+  .pag { max-width: 780px; margin: 0 auto; padding: 24px 16px 40px; }
+  h1 { font-size: 1.7rem; margin: 0 0 6px; line-height:1.2; }
+  h2 { font-size: 1.2rem; margin: 28px 0 10px; color: var(--pri); }
+  p { margin: 0 0 10px; }
+  .sub { color: var(--sub); }
+  .pasos { display:grid; gap:12px; grid-template-columns: repeat(3, 1fr); }
+  .paso { border:1px solid var(--linea); border-radius:12px; padding:14px; background:var(--suave); }
+  .paso b.n { display:inline-block; width:28px; height:28px; line-height:28px; text-align:center; border-radius:50%; background:var(--pri); color:#fff; margin-bottom:6px; }
+  .planes { display:grid; gap:12px; grid-template-columns: repeat(2, 1fr); }
+  .plan { border:1px solid var(--linea); border-radius:12px; padding:16px; }
+  .plan h3 { margin:0 0 4px; }
+  .precio { font-size:1.4rem; font-weight:700; }
+  .plan ul { padding-left:18px; margin:10px 0 0; }
+  .lanz { margin-top:12px; border:1px dashed var(--pri); border-radius:12px; padding:12px; background:var(--suave); }
+  .pago { display:flex; gap:16px; align-items:center; flex-wrap:wrap; border:1px solid var(--linea); border-radius:12px; padding:14px; }
+  .qr { width:140px; height:140px; border:2px dashed var(--sub); border-radius:8px; display:flex; align-items:center; justify-content:center; text-align:center; color:var(--sub); font-size:.8rem; padding:8px; }
+  details { border-bottom:1px solid var(--linea); padding:10px 0; }
+  summary { cursor:pointer; font-weight:600; }
+  details p { margin:8px 0 0; }
+  .nota { font-size:.85rem; color:var(--sub); }
+  footer { margin-top:28px; font-size:.9rem; }
+  .acciones { display:flex; gap:10px; flex-wrap:wrap; margin:14px 0 4px; }
+  .btn { display:inline-block; text-decoration:none; font-weight:700; padding:11px 16px; border-radius:10px; }
+  .btn-wa { background:#25d366; color:#06361a; }
+  .btn-sec { border:1px solid var(--linea); color:var(--txt); }
+  @media print { .acciones { display:none; } }
+  @media (max-width: 640px) { .pasos, .planes { grid-template-columns: 1fr; } }
+  @media print {
+    @page { size: A4; margin: 14mm; }
+    .pag { padding:0; max-width:none; }
+    details { break-inside: avoid; }
+    details > p { display:block; }
+    .paso, .plan, .pago { break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+<div class="pag">
+
+  <h1>Su catálogo en el celular, con precios en Bs que se actualizan solos</h1>
+  <p class="sub">Para comercios de Cochabamba que venden con precios atados al dólar.</p>
+  <div class="acciones">
+    <a class="btn btn-wa" href="https://wa.me/59165759059?text=Hola%20Diego%2C%20vi%20la%20propuesta%20del%20cat%C3%A1logo%20con%20precios%20al%20d%C3%ADa%20y%20quiero%20m%C3%A1s%20informaci%C3%B3n." target="_blank" rel="noopener">Consultar por WhatsApp</a>
+    <a class="btn btn-sec" href="../d/ejemplo-ferreteria/">Ver ejemplo: ferretería</a>
+    <a class="btn btn-sec" href="../d/ejemplo-boutique/">Ver ejemplo: boutique</a>
+  </div>
+
+  <p>Cuando el dólar se mueve, cambiar los precios de todos sus productos toma tiempo. Con este catálogo, los productos en dólares se convierten a bolivianos automáticamente con el tipo de cambio del día, y sus clientes le mandan el pedido armado por WhatsApp.</p>
+
+  <h2>Cómo funciona, en 3 pasos</h2>
+  <div class="pasos">
+    <div class="paso"><b class="n">1</b><br><b>Usted me da su lista</b><br>Una foto de su lista de precios, un Excel o un PDF. Yo cargo los productos.</div>
+    <div class="paso"><b class="n">2</b><br><b>Los precios se calculan solos</b><br>Los productos en USD se pasan a Bs con el tipo de cambio oficial del BCB del día (con recargo % opcional) o con su propio tipo de cambio. Se redondea hacia arriba para cuidar su margen.</div>
+    <div class="paso"><b class="n">3</b><br><b>El cliente pide por WhatsApp</b><br>Busca, agrega al carrito y le llega el pedido armado a su WhatsApp. Usted cambia productos y precios desde Google Sheets en su celular.</div>
+  </div>
+
+  <h2>Qué incluye el catálogo</h2>
+  <ul>
+    <li>Diseño para celular con buscador, categorías, productos destacados y marca de "agotado".</li>
+    <li>Precios en Bs, con tipo de cambio oficial del día o el suyo.</li>
+    <li>Carrito y pedido por WhatsApp.</li>
+    <li>Edición desde Google Sheets, sin tocar código.</li>
+    <li>Alojamiento incluido en una dirección <i>nombre.pages.dev</i>; dominio propio opcional.</li>
+  </ul>
+  <p class="nota">El catálogo no cobra en línea ni controla inventario: el pedido llega por WhatsApp y el cobro a sus clientes lo maneja usted como siempre.</p>
+
+  <h2>Planes</h2>
+  <div class="planes">
+    <div class="plan">
+      <h3>Básico</h3>
+      <div class="precio">Bs 450 <span class="sub" style="font-size:.9rem;font-weight:400">instalación</span></div>
+      <div><b>Bs 99</b> al mes</div>
+      <ul>
+        <li>Hasta 150 productos</li>
+        <li>Carga inicial desde su lista (foto, Excel o PDF)</li>
+        <li>Tipo de cambio automático</li>
+        <li>Pedidos por WhatsApp</li>
+        <li>1 cambio de diseño al mes</li>
+      </ul>
+    </div>
+    <div class="plan">
+      <h3>Pro</h3>
+      <div class="precio">Bs 850 <span class="sub" style="font-size:.9rem;font-weight:400">instalación</span></div>
+      <div><b>Bs 179</b> al mes</div>
+      <ul>
+        <li>Hasta 1.000 productos</li>
+        <li>Fotos de productos (las que usted entregue)</li>
+        <li>Dominio propio .com el primer año</li>
+        <li>Ficha de Google Business optimizada</li>
+        <li>Reporte mensual</li>
+      </ul>
+    </div>
+  </div>
+  <div class="lanz"><b>Lanzamiento:</b> 50% de descuento en la instalación para los primeros 10 negocios, a cambio de su permiso para mostrar su catálogo como ejemplo.</div>
+  <p class="nota" style="margin-top:8px">Sin contrato de permanencia. Instalación por adelantado (en Pro, 50% al empezar y 50% a la entrega) y mensualidad por adelantado cada mes. Precios en bolivianos vigentes a octubre de 2026.</p>
+
+  <h2>Pago</h2>
+  <div class="pago">
+    <div>
+      <p><b>Pago por QR en bolivianos.</b></p>
+      <p class="sub">Al confirmar su plan le enviamos el QR por WhatsApp desde el 65759059. Verifique siempre que el QR venga de ese número antes de pagar.</p>
+    </div>
+  </div>
+
+  <h2>Preguntas frecuentes</h2>
+  <details open><summary>¿Y si sube el dólar?</summary><p>Los productos en dólares se recalculan solos con el tipo de cambio oficial del BCB del día. Puede sumar un recargo en porcentaje, o usar su propio tipo de cambio, que cambia en una celda de su planilla.</p></details>
+  <details open><summary>¿Tengo que saber de computación?</summary><p>No. Yo cargo su lista al inicio. Después cambia precios en una planilla de Google Sheets desde el celular.</p></details>
+  <details open><summary>¿Mis clientes pagan en el catálogo?</summary><p>No. Arman el pedido y se lo envían por WhatsApp; usted coordina el pago y la entrega como siempre.</p></details>
+  <details open><summary>¿Es seguro?</summary><p>El catálogo no guarda tarjetas ni datos bancarios. La lista de productos que usted publica es pública, por eso no se deben incluir costos ni datos privados en la planilla.</p></details>
+  <details open><summary>¿Qué pasa si dejo de pagar?</summary><p>Se le avisa y tiene 7 días de gracia. Después se suspende el catálogo. Sus datos siguen siendo suyos.</p></details>
+  <details open><summary>¿Puedo darme de baja?</summary><p>Sí, en cualquier momento, sin contrato de permanencia.</p></details>
+  <details open><summary>¿Los datos son míos?</summary><p>Sí. Sus productos, precios, logo y fotos son suyos y puede llevarse su planilla.</p></details>
+
+  <footer>
+    <div class="acciones"><a class="btn btn-wa" href="https://wa.me/59165759059?text=Hola%20Diego%2C%20vi%20la%20propuesta%20del%20cat%C3%A1logo%20con%20precios%20al%20d%C3%ADa%20y%20quiero%20m%C3%A1s%20informaci%C3%B3n." target="_blank" rel="noopener">Escribir a Diego · 65759059</a></div>
+    <b>Diego</b> · WhatsApp: <a href="https://wa.me/59165759059?text=Hola%20Diego%2C%20vi%20la%20propuesta%20del%20cat%C3%A1logo%20con%20precios%20al%20d%C3%ADa%20y%20quiero%20m%C3%A1s%20informaci%C3%B3n." target="_blank" rel="noopener">65759059</a> · Cochabamba<br>
+    <span class="nota">Esta propuesta es informativa y no promete resultados de ventas. Términos del servicio disponibles a pedido.</span>
+  </footer>
+</div>
+</body>
+</html>
