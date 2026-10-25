@@ -1,0 +1,23 @@
+{
+  "slug": "ferreteria-callejas-d2cb",
+  "nombre": "Ferretería Callejas",
+  "lema": "Demo de catálogo digital · precios al TC del día",
+  "whatsapp": "59170000000",
+  "direccion": "",
+  "horario": "",
+  "logo": "",
+  "colorPrincipal": "#be123c",
+  "planillaCsvUrl": "",
+  "redondeo": 1,
+  "mostrarUSD": false,
+  "ocultarTC": false,
+  "tc": {
+    "modo": "oficial",
+    "endpoint": "https://diegodenac.github.io/catalogos/tc.json",
+    "recargoPct": 0,
+    "propio": 0,
+    "respaldo": 11.88
+  },
+  "demo": true,
+  "demoPara": "Ferretería Callejas"
+}

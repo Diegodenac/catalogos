@@ -1,0 +1,23 @@
+{
+  "slug": "perteca-8992",
+  "nombre": "Perteca",
+  "lema": "Demo de catálogo digital · precios al TC del día",
+  "whatsapp": "59170000000",
+  "direccion": "",
+  "horario": "",
+  "logo": "",
+  "colorPrincipal": "#7c3aed",
+  "planillaCsvUrl": "",
+  "redondeo": 1,
+  "mostrarUSD": false,
+  "ocultarTC": false,
+  "tc": {
+    "modo": "oficial",
+    "endpoint": "https://diegodenac.github.io/catalogos/tc.json",
+    "recargoPct": 0,
+    "propio": 0,
+    "respaldo": 11.88
+  },
+  "demo": true,
+  "demoPara": "Perteca"
+}

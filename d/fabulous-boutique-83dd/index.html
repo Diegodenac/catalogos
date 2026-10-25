@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta name="robots" content="noindex, nofollow" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Catálogo</title>
+  <meta name="description" content="Catálogo con precios actualizados al tipo de cambio del día. Pedidos por WhatsApp." />
+  <meta name="theme-color" content="#1f6feb" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="aviso-demo" class="aviso-demo" hidden></div>
+  <header class="cab">
+    <div class="cab-in">
+      <div class="marca">
+        <img id="logo" alt="" hidden />
+        <div>
+          <h1 id="nombre">Cargando…</h1>
+          <p id="lema" class="sub"></p>
+        </div>
+      </div>
+      <a id="btn-wa" class="btn-wa" href="#" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">WhatsApp</a>
+    </div>
+    <div id="tc" class="tc" role="status"></div>
+  </header>
+
+  <main class="cont">
+    <div class="filtros">
+      <input id="buscar" type="search" placeholder="Buscar producto o código…" autocomplete="off" />
+      <div id="cats" class="cats" role="tablist"></div>
+    </div>
+    <p id="vacio" class="vacio" hidden>No hay productos que coincidan.</p>
+    <section id="grid" class="grid" aria-live="polite"></section>
+  </main>
+
+  <footer class="pie">
+    <p id="info"></p>
+    <p class="sub">Precios referenciales en Bs, calculados con el tipo de cambio indicado arriba. Sujetos a disponibilidad.</p>
+  </footer>
+
+  <div id="carro" class="carro" hidden>
+    <div class="carro-in">
+      <div><strong id="carro-n">0</strong> productos · <strong id="carro-total">Bs 0</strong></div>
+      <div class="carro-acc">
+        <button id="carro-ver" class="btn-sec" type="button">Ver</button>
+        <button id="carro-pedir" class="btn-pri" type="button">Pedir por WhatsApp</button>
+      </div>
+    </div>
+  </div>
+
+  <dialog id="dlg-carro">
+    <h2>Tu pedido</h2>
+    <ul id="lista-carro"></ul>
+    <p class="total">Total: <strong id="dlg-total"></strong></p>
+    <label class="campo">Tu nombre (opcional)<input id="cli-nombre" autocomplete="name" /></label>
+    <div class="dlg-acc">
+      <button id="dlg-vaciar" class="btn-sec" type="button">Vaciar</button>
+      <button id="dlg-cerrar" class="btn-sec" type="button">Seguir viendo</button>
+      <button id="dlg-pedir" class="btn-pri" type="button">Enviar pedido</button>
+    </div>
+  </dialog>
+
+  <script src="app.js" type="module"></script>
+</body>
+</html>

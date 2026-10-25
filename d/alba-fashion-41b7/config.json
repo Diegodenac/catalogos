@@ -1,0 +1,23 @@
+{
+  "slug": "alba-fashion-41b7",
+  "nombre": "ALBA Fashion",
+  "lema": "Demo de catálogo digital · precios al TC del día",
+  "whatsapp": "59170000000",
+  "direccion": "",
+  "horario": "",
+  "logo": "",
+  "colorPrincipal": "#9d174d",
+  "planillaCsvUrl": "",
+  "redondeo": 1,
+  "mostrarUSD": false,
+  "ocultarTC": false,
+  "tc": {
+    "modo": "oficial",
+    "endpoint": "https://diegodenac.github.io/catalogos/tc.json",
+    "recargoPct": 0,
+    "propio": 0,
+    "respaldo": 11.88
+  },
+  "demo": true,
+  "demoPara": "ALBA Fashion"
+}
