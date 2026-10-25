@@ -56,7 +56,14 @@ function aplicarMarca(cfg) {
     av.textContent = `DEMO preparada para ${cfg.demoPara || cfg.nombre}: productos y precios de ejemplo. No es la tienda oficial del negocio.`;
     av.hidden = false;
   }
-  $("#btn-wa").href = `https://wa.me/${cfg.whatsapp}?text=${encodeURIComponent("Hola, vi su catálogo y tengo una consulta.")}`;
+  if (!cfg.whatsapp) {
+    // Demo sin número: no se abre WhatsApp; se muestra cómo llegaría el pedido.
+    $("#btn-wa").hidden = true;
+    $("#carro-pedir").textContent = "Ver pedido";
+    $("#dlg-pedir").textContent = "Ver cómo llega el pedido";
+  } else {
+    $("#btn-wa").href = `https://wa.me/${cfg.whatsapp}?text=${encodeURIComponent("Hola, vi su catálogo y tengo una consulta.")}`;
+  }
   $("#info").innerHTML = [cfg.direccion, cfg.horario].filter(Boolean).map(esc).join(" · ");
 }
 
@@ -157,6 +164,12 @@ function enviarPedido() {
     cliente: $("#cli-nombre").value.trim(),
     tc: estado.cfg.ocultarTC ? null : estado.tc.valor,
   });
+  if (!estado.cfg.whatsapp) {
+    const v = $("#vista-pedido");
+    v.textContent = "Así le llegaría este pedido al negocio por WhatsApp:\n\n" + txt;
+    v.hidden = false;
+    return;
+  }
   window.open(`https://wa.me/${estado.cfg.whatsapp}?text=${encodeURIComponent(txt)}`, "_blank", "noopener");
 }
 
